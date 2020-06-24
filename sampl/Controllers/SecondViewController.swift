@@ -21,6 +21,9 @@ class SecondViewController: UIViewController {
 
         view.backgroundColor = .blue
         view.addSubview(tableView)
+        
+        navigationItem.title = "三十六歌仙たち"
+        
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -43,8 +46,9 @@ class SecondViewController: UIViewController {
                 let id = dictionary.object(forKey: "id") as? String ?? "0"
                 let name = dictionary.object(forKey: "name") as? String ?? "no name"
                 let description = dictionary.object(forKey: "description") as? String ?? "description"
-                
-                let newKasen = Kasen(id: id, name: name, description: description)
+                let imageUrl = dictionary.object(forKey: "image_url") as? String ?? ""
+
+                let newKasen = Kasen(id: id, name: name, description: description, imageUrl: imageUrl)
                 
                 Utils.shared.kasens.append(newKasen)
             })
