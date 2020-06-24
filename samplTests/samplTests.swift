@@ -11,6 +11,22 @@ import XCTest
 
 class samplTests: XCTestCase {
 
+    func testAPICallTest () {
+        
+        let exp = expectation(description: "get information test")
+        
+        Utils.shared.fetchKasenData { (dicArray) in
+
+            if dicArray?.count ?? 0 > 0 {
+                exp.fulfill()
+            } else {
+                XCTFail("number of persons returned is zero.")
+            }
+        }
+        
+        wait(for: [exp], timeout: 10.0)
+    }
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
