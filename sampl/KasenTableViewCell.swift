@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PINRemoteImage
 
 class KasenTableViewCell: UITableViewCell {
     
@@ -19,6 +20,8 @@ class KasenTableViewCell: UITableViewCell {
     var profileImageUrl: String? {
         didSet {
             // TODO use pinremoteimage
+            print("profile image is \(profileImageUrl ?? "n/a")")
+            profileImageView.pin_setImage(from: URL(string: profileImageUrl ?? ""))
         }
     }
     
@@ -40,6 +43,8 @@ class KasenTableViewCell: UITableViewCell {
         imageView.layer.cornerRadius = 5
         imageView.layer.masksToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFill
+
         return imageView
     }()
     
@@ -68,6 +73,7 @@ class KasenTableViewCell: UITableViewCell {
         addSubview(nameLabel)
         addSubview(descriptionTextView)
         addSubview(profileImageView)
+        descriptionTextView.isEditable = false
         
         nameLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 32).isActive = true
         nameLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 8).isActive = true

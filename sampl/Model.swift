@@ -13,9 +13,11 @@ class Kasen {
     let id: String
     let name: String
     let description: String
-    init (id: String, name: String, description: String) {
+    let imageUrl: String
+    init (id: String, name: String, description: String, imageUrl: String) {
         self.id = id
         self.name = name
+        self.imageUrl = imageUrl
         self.description = description
     }
 }

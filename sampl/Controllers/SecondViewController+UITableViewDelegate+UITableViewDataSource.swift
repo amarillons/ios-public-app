@@ -32,7 +32,10 @@ extension SecondViewController: UITableViewDelegate, UITableViewDataSource {
 
         let kasen = Utils.shared.kasens[indexPath.row]
         cell.nameText = kasen.name
+        cell.profileImageUrl = kasen.imageUrl
         cell.descriptionText = kasen.description
+        
+        cell.selectionStyle = .none
         
         return cell
     }
