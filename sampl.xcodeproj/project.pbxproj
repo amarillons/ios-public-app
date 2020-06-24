@@ -20,6 +20,8 @@
 		A4B79D6A24A2D023003B6B58 /* aurora.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4B79D6924A2D023003B6B58 /* aurora.jpg */; };
 		A4B79D6C24A2D554003B6B58 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B79D6B24A2D554003B6B58 /* SecondViewController.swift */; };
 		A4B79D6E24A2D7C1003B6B58 /* SecondViewController+UITableViewDelegate+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B79D6D24A2D7C1003B6B58 /* SecondViewController+UITableViewDelegate+UITableViewDataSource.swift */; };
+		A4B79D7024A2D95E003B6B58 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B79D6F24A2D95E003B6B58 /* Utils.swift */; };
+		A4B79D7224A2E13F003B6B58 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B79D7124A2E13F003B6B58 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		A4B79D6924A2D023003B6B58 /* aurora.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = aurora.jpg; sourceTree = "<group>"; };
 		A4B79D6B24A2D554003B6B58 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		A4B79D6D24A2D7C1003B6B58 /* SecondViewController+UITableViewDelegate+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SecondViewController+UITableViewDelegate+UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		A4B79D6F24A2D95E003B6B58 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		A4B79D7124A2E13F003B6B58 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,8 @@
 		A4B79D3324A2AAD7003B6B58 /* sampl */ = {
 			isa = PBXGroup;
 			children = (
+				A4B79D6F24A2D95E003B6B58 /* Utils.swift */,
+				A4B79D7124A2E13F003B6B58 /* Model.swift */,
 				A4B79D3424A2AAD7003B6B58 /* AppDelegate.swift */,
 				A4B79D6624A2C0EF003B6B58 /* images */,
 				A4B79D3624A2AAD7003B6B58 /* SceneDelegate.swift */,
@@ -284,9 +290,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4B79D7224A2E13F003B6B58 /* Model.swift in Sources */,
 				A4B79D3924A2AAD7003B6B58 /* ViewController.swift in Sources */,
 				A4B79D3524A2AAD7003B6B58 /* AppDelegate.swift in Sources */,
 				A4B79D6E24A2D7C1003B6B58 /* SecondViewController+UITableViewDelegate+UITableViewDataSource.swift in Sources */,
+				A4B79D7024A2D95E003B6B58 /* Utils.swift in Sources */,
 				A4B79D3724A2AAD7003B6B58 /* SceneDelegate.swift in Sources */,
 				A4B79D6C24A2D554003B6B58 /* SecondViewController.swift in Sources */,
 				A4B79D6524A2B9C6003B6B58 /* FirstViewController.swift in Sources */,

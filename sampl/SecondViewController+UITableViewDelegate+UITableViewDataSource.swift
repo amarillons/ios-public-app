@@ -10,24 +10,22 @@ import Foundation
 import UIKit
 
 extension SecondViewController: UITableViewDelegate, UITableViewDataSource {
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        
+        return 1
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return Utils.shared.kasens.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
 
-        switch indexPath.row {
-        case 0:
-            cell.textLabel?.text = "表示名を変更"
-        case 1:
-            cell.textLabel?.text = "よくある質問"
-        case 2:
-            cell.textLabel?.text = "アプリの作者について"
-        default:
-            print("nothing")
-        }
+        let kasen = Utils.shared.kasens[indexPath.row]
+        cell.textLabel?.text = kasen.name
         
         return cell
     }

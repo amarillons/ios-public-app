@@ -14,7 +14,7 @@ class SecondViewController: UIViewController {
        let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
-    }()
+    }()    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +25,36 @@ class SecondViewController: UIViewController {
         tableView.dataSource = self
         
         // Do any additional setup after loading the view.
+        tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+        tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellId")
+        tableView.register(UITableViewHeaderFooterView.self, forHeaderFooterViewReuseIdentifier: "headerCellId")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        Utils.shared.fetchKasenData { (dicArray) in
 
+            dicArray?.forEach({ (dictionary) in
+                
+                let id = dictionary.object(forKey: "id") as? String ?? "0"
+                let name = dictionary.object(forKey: "name") as? String ?? "no name"
+                let description = dictionary.object(forKey: "name") as? String ?? "description"
+                
+                let newKasen = Kasen(id: id, name: name, description: description)
+                
+                Utils.shared.kasens.append(newKasen)
+            })
+            
+            DispatchQueue.main.async {
+            self.tableView.reloadData()
+            }
+        }
+    }
+    
     /*
     // MARK: - Navigation
 
