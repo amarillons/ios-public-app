@@ -15,6 +15,11 @@
 		A4B79D4124A2AADB003B6B58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4B79D3F24A2AADB003B6B58 /* LaunchScreen.storyboard */; };
 		A4B79D4C24A2AADB003B6B58 /* samplTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B79D4B24A2AADB003B6B58 /* samplTests.swift */; };
 		A4B79D5724A2AADB003B6B58 /* samplUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B79D5624A2AADB003B6B58 /* samplUITests.swift */; };
+		A4B79D6524A2B9C6003B6B58 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B79D6424A2B9C6003B6B58 /* FirstViewController.swift */; };
+		A4B79D6824A2C0FE003B6B58 /* uta_yomu_woman.png in Resources */ = {isa = PBXBuildFile; fileRef = A4B79D6724A2C0FE003B6B58 /* uta_yomu_woman.png */; };
+		A4B79D6A24A2D023003B6B58 /* aurora.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A4B79D6924A2D023003B6B58 /* aurora.jpg */; };
+		A4B79D6C24A2D554003B6B58 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B79D6B24A2D554003B6B58 /* SecondViewController.swift */; };
+		A4B79D6E24A2D7C1003B6B58 /* SecondViewController+UITableViewDelegate+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B79D6D24A2D7C1003B6B58 /* SecondViewController+UITableViewDelegate+UITableViewDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		A4B79D5224A2AADB003B6B58 /* samplUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = samplUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4B79D5624A2AADB003B6B58 /* samplUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = samplUITests.swift; sourceTree = "<group>"; };
 		A4B79D5824A2AADB003B6B58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4B79D6424A2B9C6003B6B58 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		A4B79D6724A2C0FE003B6B58 /* uta_yomu_woman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uta_yomu_woman.png; sourceTree = "<group>"; };
+		A4B79D6924A2D023003B6B58 /* aurora.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = aurora.jpg; sourceTree = "<group>"; };
+		A4B79D6B24A2D554003B6B58 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		A4B79D6D24A2D7C1003B6B58 /* SecondViewController+UITableViewDelegate+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SecondViewController+UITableViewDelegate+UITableViewDataSource.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +110,11 @@
 			isa = PBXGroup;
 			children = (
 				A4B79D3424A2AAD7003B6B58 /* AppDelegate.swift */,
+				A4B79D6624A2C0EF003B6B58 /* images */,
 				A4B79D3624A2AAD7003B6B58 /* SceneDelegate.swift */,
+				A4B79D6424A2B9C6003B6B58 /* FirstViewController.swift */,
+				A4B79D6B24A2D554003B6B58 /* SecondViewController.swift */,
+				A4B79D6D24A2D7C1003B6B58 /* SecondViewController+UITableViewDelegate+UITableViewDataSource.swift */,
 				A4B79D3824A2AAD7003B6B58 /* ViewController.swift */,
 				A4B79D3A24A2AAD7003B6B58 /* Main.storyboard */,
 				A4B79D3D24A2AADB003B6B58 /* Assets.xcassets */,
@@ -126,6 +140,15 @@
 				A4B79D5824A2AADB003B6B58 /* Info.plist */,
 			);
 			path = samplUITests;
+			sourceTree = "<group>";
+		};
+		A4B79D6624A2C0EF003B6B58 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				A4B79D6724A2C0FE003B6B58 /* uta_yomu_woman.png */,
+				A4B79D6924A2D023003B6B58 /* aurora.jpg */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +256,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4B79D4124A2AADB003B6B58 /* LaunchScreen.storyboard in Resources */,
+				A4B79D6A24A2D023003B6B58 /* aurora.jpg in Resources */,
+				A4B79D6824A2C0FE003B6B58 /* uta_yomu_woman.png in Resources */,
 				A4B79D3E24A2AADB003B6B58 /* Assets.xcassets in Resources */,
 				A4B79D3C24A2AAD7003B6B58 /* Main.storyboard in Resources */,
 			);
@@ -261,7 +286,10 @@
 			files = (
 				A4B79D3924A2AAD7003B6B58 /* ViewController.swift in Sources */,
 				A4B79D3524A2AAD7003B6B58 /* AppDelegate.swift in Sources */,
+				A4B79D6E24A2D7C1003B6B58 /* SecondViewController+UITableViewDelegate+UITableViewDataSource.swift in Sources */,
 				A4B79D3724A2AAD7003B6B58 /* SceneDelegate.swift in Sources */,
+				A4B79D6C24A2D554003B6B58 /* SecondViewController.swift in Sources */,
+				A4B79D6524A2B9C6003B6B58 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
