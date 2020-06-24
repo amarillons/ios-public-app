@@ -17,15 +17,22 @@ extension SecondViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
         return Utils.shared.kasens.count
+    }    
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return 160
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellId", for: indexPath) as! KasenTableViewCell
 
         let kasen = Utils.shared.kasens[indexPath.row]
-        cell.textLabel?.text = kasen.name
+        cell.nameText = kasen.name
+        cell.descriptionText = kasen.description
         
         return cell
     }

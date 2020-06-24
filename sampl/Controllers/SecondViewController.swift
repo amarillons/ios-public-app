@@ -30,7 +30,7 @@ class SecondViewController: UIViewController {
         tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cellId")
+        tableView.register(KasenTableViewCell.self, forCellReuseIdentifier: "cellId")
         tableView.register(UITableViewHeaderFooterView.self, forHeaderFooterViewReuseIdentifier: "headerCellId")
     }
     
@@ -42,7 +42,7 @@ class SecondViewController: UIViewController {
                 
                 let id = dictionary.object(forKey: "id") as? String ?? "0"
                 let name = dictionary.object(forKey: "name") as? String ?? "no name"
-                let description = dictionary.object(forKey: "name") as? String ?? "description"
+                let description = dictionary.object(forKey: "description") as? String ?? "description"
                 
                 let newKasen = Kasen(id: id, name: name, description: description)
                 
@@ -50,7 +50,7 @@ class SecondViewController: UIViewController {
             })
             
             DispatchQueue.main.async {
-            self.tableView.reloadData()
+                self.tableView.reloadData()
             }
         }
     }
