@@ -2,7 +2,7 @@
 
 ![Swift](https://github.com/amarillons/ios-public-app/workflows/Swift/badge.svg)
 
-iOS の公開用リポジトリ
+歴史の情報を表示する iOS アプリ
 
 ### 自動ビルドについて
 
