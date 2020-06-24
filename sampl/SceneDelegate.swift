@@ -22,9 +22,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
             // window.rootViewController = UIHostingController(rootView: contentView)
-            let vc = UIViewController()
-            vc.view.backgroundColor = .blue
-            window.rootViewController = vc
+            let vc = FirstViewController()
+            let nc = UINavigationController(rootViewController: vc)
+
+            window.rootViewController = nc
             
             self.window = window
             window.makeKeyAndVisible()
