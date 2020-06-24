@@ -23,7 +23,7 @@ class Utils {
 
 //        var semaphore = DispatchSemaphore (value: 0)
 
-        var request = URLRequest(url: URL(string: "https://a99820.xsrv.jp/kasen_api.php")!,timeoutInterval: Double.infinity)
+        var request = URLRequest(url: URL(string: "https://xxxxx.xxxx.jp/my_api.php")!,timeoutInterval: Double.infinity)
         request.httpMethod = "GET"
 
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
